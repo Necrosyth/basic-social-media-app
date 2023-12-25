@@ -1,0 +1,24 @@
+.nav_bar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: blueviolet;
+}
+.left{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  text-decoration: none;
+  color: aliceblue;
+}
+.left img{
+  display: flex;
+  width: 20%;
+  border-radius: 100%;
+}
+
+.container{
+  width: 750px;
+}
