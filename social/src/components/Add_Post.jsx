@@ -24,7 +24,7 @@ const Add_Post = () => {
             className="form-control"
             id="exampleInputEmail1"
             aria-describedby="emailHelp"
-            onChange={(e = setTitle(e.target.value))}
+            onChange={(e) = setTitle(e.target.value)}
           />
         </div>
         <div className="mb-3">
