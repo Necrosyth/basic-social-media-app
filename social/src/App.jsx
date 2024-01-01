@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "./components/navbar"; // Use PascalCase for component names
+import Navbar from "./components/Navbar"; // Use PascalCase for component names
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Add_Post from "./components/Add_Post";
 import All_Users from "./components/All_Users";
