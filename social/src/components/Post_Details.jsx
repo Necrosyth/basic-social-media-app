@@ -17,7 +17,26 @@ const Post_Details = () => {
     console.log("Single doc", data);
   }, [id]);
 
-  return <div>The ID is {id}</div>;
+  return (
+    <>
+    <h2 className="post-title">{data.title}</h2>
+      <div className="container text-center my-3">
+        <div className="post_detail">
+          <div className="post_detail img">
+          </div>
+          <div className="post_detail img">
+            <img src={data.imageUrl} alt="" width={500}/>
+          </div>
+          <div className="post_user img">
+            <img src={data.photoUrl} alt="" />
+          </div>
+          <div className="post_usename">
+            <h3>{data.author}</h3>
+          </div>
+        </div>
+      </div>
+    </>
+  );
 };
 
 export default Post_Details;

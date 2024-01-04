@@ -3,8 +3,8 @@ import { doc, deleteDoc } from "firebase/firestore";
 import { db } from "../firebase.config";
 import Convert_Date_Time from "./Convert_Date_Time";
 import { Link } from "react-router-dom";
-Link
-const Post = ({ data }) => {
+import Comments from "./Comments";
+const Post = ({data}) => {
   //   console.log(data);
   const deletePost = async (id) => {
     // alert("This will delete your post forever! Click OK to continue..");
@@ -20,6 +20,7 @@ const Post = ({ data }) => {
           <img src={data.imageUrl} className="card-img-top" alt="..." />
           <div className="card-body">
             <h3>{data.author}</h3>
+            
 
             <p className="card-text">{data.description}</p>
             

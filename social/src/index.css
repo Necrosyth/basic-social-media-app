@@ -26,3 +26,16 @@
 .btn{
   margin-right: 10px
 }
+
+.post_user img{
+  border-radius: 100%;
+}
+
+.post_detail img{
+  border-radius: 10%;
+}
+
+.post-title{
+  margin-left: 45%;
+}
+
