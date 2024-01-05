@@ -2,10 +2,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px;
-  background-color: blueviolet;
+  padding: 13px;
+  background-color: #276d95;
+
 }
-.left{
+.left{  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,7 +21,7 @@
 }
 
 .container{
-  width: 750px;
+  width: 800px;
 }
 
 .btn{
