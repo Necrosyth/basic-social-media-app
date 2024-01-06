@@ -66,7 +66,10 @@ const Add_Post = () => {
   };
 
   return (
+
+    
     <div className="container add_post my-5">
+      <h1>Upload a New Post!</h1>
       <form onSubmit={handleSubmit}>
         {/* <form> */}
         <div className="mb-3">

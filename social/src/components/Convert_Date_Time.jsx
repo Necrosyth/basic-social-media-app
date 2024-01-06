@@ -13,7 +13,7 @@ const Convert_Date_Time = ({ seconds, nanoseconds }) => {
     day: "numeric",
     hour: "numeric",
     minute: "numeric",
-    seconds: "numeric",
+    second: "numeric",
     timeZoneName: "short",
   });
 
