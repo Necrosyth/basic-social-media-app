@@ -37,7 +37,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="nav_bar">
+      <div className="nav_bar sticky-top">
         <Link to={"/"} className="left">
           {auth.currentUser ? (
             <>
@@ -45,7 +45,7 @@ const Navbar = () => {
               <h3>{auth.currentUser?.displayName}</h3>
             </>
           ) : (
-            <h2>Social media App</h2>
+            <h2>Social-Connect</h2>
           )}
         </Link>
         <div className="right">

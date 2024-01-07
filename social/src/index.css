@@ -6,8 +6,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 13px;
-  /* background-color: #276d95; */
+  padding: 15px;
+  background-color: #05466c;
 
 }
 .left{  
@@ -27,6 +27,9 @@
 .container{
   width: 800px;
 }
+/* .card-img-top{
+  border-radius: 10%;
+} */
 
 .btn{
   margin-right: 10px
@@ -40,6 +43,7 @@
 .post_detail img{
   border-radius: 10%;
 }
+
 
 .post-title{
   margin-left: 48%;

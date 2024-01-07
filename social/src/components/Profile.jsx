@@ -22,8 +22,10 @@ const Profile = () => {
       <div className="col-md-8 col-lg-6 col-xl-5 p-0 mx-auto">
         <h4 className="font-weight-bold my-4">{auth.currentUser.displayName}</h4>
         <div className="opacity-75 mb-4">
-          Lorem ipsum dolor sit amet, nibh suavitate qualisque ut nam. Ad harum
-          primis electram duo, porro principes ei has.
+  User Since - {auth.currentUser.metadata.creationTime}
+        </div>
+        <div className="opacity-75 mb-4">
+  Last Sign In - {auth.currentUser.metadata.lastSignInTime}
         </div>
       </div>
 

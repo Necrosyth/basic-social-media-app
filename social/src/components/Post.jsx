@@ -11,11 +11,11 @@ const Post = ({data}) => {
     const deleteData = doc(db, "post", id);
     await deleteDoc(deleteData);
   };
-
+ 
   return (
     <>
       <div className="container">
-        <div className="post_user my-5"></div>
+        <div className="post_user my-3"></div>
         <div className="card">
           <img src={data.imageUrl} className="card-img-top" alt="..." />
           <div className="card-body">
