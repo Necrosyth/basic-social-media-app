@@ -8,6 +8,7 @@ import {
 } from "firebase/firestore";
 import { db } from "../firebase.config";
 import { getAuth } from "firebase/auth";
+import displayComms from "./Display_Comms";
 
 const Comments = (postId) => {
   const auth = getAuth();
@@ -15,18 +16,25 @@ const Comments = (postId) => {
   const [newComment, setNewComment] = useState(" ");
 
   useEffect(() => {
-    const commentQuery = query(collection(db, "comments"), orderBy("time", "desc"));
+    const commentQuery = query(
+      collection(db, "comments"),
+      orderBy("time", "desc")
+    );
 
     const fetchData = async () => {
       await onSnapshot(commentQuery, (snapshot) => {
-        setComments(snapshot.docs.map((doc) => ({
-            ...doc.data(),id:doc.id}))) ;
+        setComments(
+          snapshot.docs.map((doc) => ({
+            ...doc.data(),
+            id: doc.id,
+          }))
+        );
       });
-    }
+    };
 
     fetchData();
-    console.log("Fetching comms",comments);
-  }, []); 
+    console.log("Fetching comms", comments);
+  }, []);
 
   const handleAddComment = async (e) => {
     e.preventDefault();
@@ -36,14 +44,18 @@ const Comments = (postId) => {
         comment: newComment,
         author: auth.currentUser.displayName,
         photoUrl: auth.currentUser.photoURL,
-        userId:auth.currentUser.uid,
+        userId: auth.currentUser.uid,
         time: new Date(),
-      })
+      });
       setNewComment("");
     } else {
-      ("Login First!");
+      alert("Login First!");
     }
   };
+  const filteredComment = comments.filter((comment) => {
+    return comment.postId === postId;
+  });
+  console.log("filtered", filteredComment);
 
   return (
     <>
@@ -65,6 +77,12 @@ const Comments = (postId) => {
             Add Comment
           </button>
         </form>
+        <h2>Total Comments {filteredComment.length}</h2>
+        <br />
+        {filteredComment.map((comment) => (
+          <Display_Comms key={comment.userId} comment={comment} />
+        ))}
+       < displayComms/>
       </div>
     </>
   );

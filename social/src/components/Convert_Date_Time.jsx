@@ -3,7 +3,7 @@ import React from "react";
 const Convert_Date_Time = ({ seconds, nanoseconds }) => {
   const time = seconds * 1000 + nanoseconds / 1e6;
   const date = new Date(time);
-  // console.log(date)
+
   date.setUTCHours(date.getUTCHours()+5);
   date.setUTCMinutes(date.getUTCMinutes()+30);
 
